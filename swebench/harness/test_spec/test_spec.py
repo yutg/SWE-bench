@@ -90,7 +90,8 @@ class TestSpec:
     
     @property
     def is_remote_image(self):
-        return self.namespace is not None
+        # return self.namespace is not None
+        return False
 
     def get_instance_container_name(self, run_id=None):
         if not run_id:
