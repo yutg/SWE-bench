@@ -11,7 +11,7 @@ TEST_PYTEST_VERBOSE = "pytest -rA --tb=long"
 TEST_SPHINX = "tox --current-env -epy39 -v --"
 TEST_SYMPY = "PYTHONWARNINGS='ignore::UserWarning,ignore::SyntaxWarning' bin/test -C --verbose"
 TEST_SYMPY_VERBOSE = "bin/test -C --verbose"
-TEST_GYT = "python3.11 -m unittest test_calculator.py"
+TEST_GYT = "pytest --no-header -rA"
 
 
 # Constants - Installation Specifications
