@@ -589,6 +589,9 @@ for k in ["v5.3"]:
 SPECS_GYT = {
     k: {
         "python": "3.11",
+        "pip_packages": [
+            "pytest",
+        ],
         "test_cmd": TEST_GYT,
     }
     for k in ["0.1", "1.0"]
