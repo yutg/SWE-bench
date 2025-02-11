@@ -279,4 +279,5 @@ MAP_REPO_TO_PARSER_PY = {
     "sqlfluff/sqlfluff": parse_log_sqlfluff,
     "sphinx-doc/sphinx": parse_log_sphinx,
     "sympy/sympy": parse_log_sympy,
+    "yutg/gytpy1": parse_log_django,
 }
