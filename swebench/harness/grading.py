@@ -47,9 +47,6 @@ def get_logs_eval(test_spec: TestSpec, log_fp: str) -> tuple[dict[str, str], boo
     
     TODO(john-b-yang): Check this is working properly...
     """
-
-    print(f"===MAP_REPO_TO_PARSER: {MAP_REPO_TO_PARSER}")
-    print(f"===MAP_REPO_VERSION_TO_SPECS: {MAP_REPO_VERSION_TO_SPECS}")
     repo = test_spec.repo
     version = test_spec.version
     log_parser = MAP_REPO_TO_PARSER[repo]
@@ -66,8 +63,10 @@ def get_logs_eval(test_spec: TestSpec, log_fp: str) -> tuple[dict[str, str], boo
             APPLY_PATCH_FAIL, RESET_FAILED, TESTS_ERROR, TESTS_TIMEOUT,
         ]))
         if bad_codes:
+            print(f"===bad_codes: {bad_codes}")
             return {}, False
         elif not (START_TEST_OUTPUT in content and END_TEST_OUTPUT in content):
+            print(f"===patch did not apply")
             # Test patch did not apply (should not happen at all)
             return {}, False
 
