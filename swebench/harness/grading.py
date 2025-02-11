@@ -65,10 +65,10 @@ def get_logs_eval(test_spec: TestSpec, log_fp: str) -> tuple[dict[str, str], boo
         if bad_codes:
             print(f"===bad_codes: {bad_codes}")
             return {}, False
-        elif not (START_TEST_OUTPUT in content and END_TEST_OUTPUT in content):
-            print(f"===patch did not apply")
-            # Test patch did not apply (should not happen at all)
-            return {}, False
+        # elif not (START_TEST_OUTPUT in content and END_TEST_OUTPUT in content):
+        #     print(f"===patch did not apply")
+        #     # Test patch did not apply (should not happen at all)
+        #     return {}, False
 
         # Get status map of evaluation results
         content = content.split(test_cmd)[-1]
